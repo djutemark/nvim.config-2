@@ -1,5 +1,6 @@
 -- vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set('n', '<leader>pp', require('telescope.builtin').git_files, { })
 
 -- When in visual mode, J and K move lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
