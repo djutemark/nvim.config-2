@@ -74,6 +74,16 @@ require('packer').startup(function(use)
   -- 2023-02-20: Add neoformat
   use 'sbdchd/neoformat'
 
+  -- 2023-02-20: Add persistence.nvim
+  use({
+    "folke/persistence.nvim",
+    event = "BufReadPre", -- this will only start session saving when an actual file was opened
+    module = "persistence",
+    config = function()
+      require("persistence").setup()
+    end,
+  })
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then

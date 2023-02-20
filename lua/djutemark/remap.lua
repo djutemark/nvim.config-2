@@ -26,7 +26,10 @@ vim.keymap.set("n", "<leader>wk", [[<C-w>k]]);
 vim.keymap.set("n", "<leader>wj", [[<C-w>j]]);
 
 -- Close window
-vim.keymap.set("n", "<leader>q", [[:q<CR>]])
+vim.keymap.set("n", "<leader>wq", [[:q<CR>]])
+
+-- Close ALL windows
+vim.keymap.set("n", "<leader>qq", [[:qa<CR>]])
 
 vim.keymap.set("n", "<C-s>", [[:w<CR>]])
 
