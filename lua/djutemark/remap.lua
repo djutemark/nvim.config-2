@@ -31,5 +31,11 @@ vim.keymap.set("n", "<leader>wq", [[:q<CR>]])
 -- Close ALL windows
 vim.keymap.set("n", "<leader>qq", [[:qa<CR>]])
 
+-- v splits horizontal, V splits vertical (with leader)
+vim.keymap.set("n", "<leader>v", [[<C-w>v]])
+vim.keymap.set("n", "<leader>V", [[<C-w>s]])
+
+-- C-s saves!
 vim.keymap.set("n", "<C-s>", [[:w<CR>]])
+
 
