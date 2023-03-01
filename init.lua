@@ -100,6 +100,9 @@ require('packer').startup(function(use)
     end
   }
 
+  -- 2023-02-28
+  use { 'mg979/vim-visual-multi', branch = "master"}
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
