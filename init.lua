@@ -103,6 +103,10 @@ require('packer').startup(function(use)
   -- 2023-02-28
   use { 'mg979/vim-visual-multi', branch = "master"}
 
+  -- 2023-03-02
+  use 'RRethy/vim-illuminate'
+  use 'leafOfTree/vim-svelte-plugin'
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
@@ -469,7 +473,7 @@ cmp.setup {
   },
 }
 
-vim.keymap.set("n", "<leader>b", [[:Neotree reveal<cr>]])
+vim.keymap.set("n", "<leader>b", [[:Neotree toggle reveal<cr>]])
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
