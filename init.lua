@@ -106,6 +106,7 @@ require('packer').startup(function(use)
   -- 2023-03-02
   use 'RRethy/vim-illuminate'
   use 'leafOfTree/vim-svelte-plugin'
+  use 'm4xshen/autoclose.nvim'
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -478,4 +479,5 @@ vim.keymap.set("n", "<leader>b", [[:Neotree toggle reveal<cr>]])
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
+require("autoclose").setup()
 
