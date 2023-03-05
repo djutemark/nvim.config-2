@@ -481,3 +481,5 @@ vim.keymap.set("n", "<leader>b", [[:Neotree toggle reveal<cr>]])
 
 require("autoclose").setup()
 
+vim.cmd([[ let  g:vim_svelte_plugin_use_typescript = 1 ]])
+
