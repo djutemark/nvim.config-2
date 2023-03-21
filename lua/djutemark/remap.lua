@@ -18,22 +18,22 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 
 -- Allow leader to control windows
-vim.keymap.set("n", "<leader>wv", [[<C-w><C-v>]]);
-vim.keymap.set("n", "<leader>ws", [[<C-w><C-s>]]);
-vim.keymap.set("n", "<leader>wh", [[<C-w>h]]);
-vim.keymap.set("n", "<leader>wl", [[<C-w>l]]);
-vim.keymap.set("n", "<leader>wk", [[<C-w>k]]);
-vim.keymap.set("n", "<leader>wj", [[<C-w>j]]);
+-- vim.keymap.set("n", "<leader>wv", [[<C-w><C-v>]]);
+-- vim.keymap.set("n", "<leader>ws", [[<C-w><C-s>]]);
+-- vim.keymap.set("n", "<leader>wh", [[<C-w>h]]);
+-- vim.keymap.set("n", "<leader>wl", [[<C-w>l]]);
+-- vim.keymap.set("n", "<leader>wk", [[<C-w>k]]);
+-- vim.keymap.set("n", "<leader>wj", [[<C-w>j]]);
+
+-- v splits horizontal, V splits vertical (with leader)
+-- vim.keymap.set("n", "<leader>v", [[<C-w>v]])
+-- vim.keymap.set("n", "<leader>V", [[<C-w>s]])
 
 -- Close window
 vim.keymap.set("n", "<leader>wq", [[:q<CR>]])
 
 -- Close ALL windows
 vim.keymap.set("n", "<leader>qq", [[:qa<CR>]])
-
--- v splits horizontal, V splits vertical (with leader)
-vim.keymap.set("n", "<leader>v", [[<C-w>v]])
-vim.keymap.set("n", "<leader>V", [[<C-w>s]])
 
 -- C-s saves!
 vim.keymap.set("n", "<C-s>", [[:w<CR>]])
