@@ -108,6 +108,9 @@ require('packer').startup(function(use)
   use 'leafOfTree/vim-svelte-plugin'
   use 'm4xshen/autoclose.nvim'
 
+  -- 2023-03-25
+  use 'tikhomirov/vim-glsl'
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
