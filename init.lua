@@ -111,6 +111,10 @@ require('packer').startup(function(use)
   -- 2023-03-25
   use 'tikhomirov/vim-glsl'
 
+  -- 2023-04-07
+  use 'nvim-tree/nvim-web-devicons'
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
@@ -274,7 +278,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help', 'vim' },
+  ensure_installed = { 'c', 'cpp', 'c_sharp', 'go', 'lua', 'python', 'rust', 'typescript', 'svelte', 'help', 'vim' },
 
   highlight = { enable = true },
   indent = { enable = true, disable = { 'python' } },
