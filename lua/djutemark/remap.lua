@@ -1,4 +1,4 @@
--- vim.g.mapleader = " "
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set('n', '<leader>pp', require('telescope.builtin').git_files, { })
 
@@ -38,4 +38,7 @@ vim.keymap.set("n", "<leader>qq", [[:qa<CR>]])
 -- C-s saves!
 vim.keymap.set("n", "<C-s>", [[:w<CR>]])
 
+-- <C-u/d> keeps cursor in the middle of the screen
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
