@@ -118,6 +118,9 @@ require('packer').startup(function(use)
   -- 2023-04-19
   use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
 
+  -- 2023-04-26
+  use 'sakshamgupta05/vim-todo-highlight'
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
