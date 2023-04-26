@@ -30,7 +30,7 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 -- vim.keymap.set("n", "<leader>V", [[<C-w>s]])
 
 -- Close window
-vim.keymap.set("n", "<leader>wq", [[:q<CR>]])
+vim.keymap.set("n", "<leader>qw", [[:q<CR>]])
 
 -- Close ALL windows
 vim.keymap.set("n", "<leader>qq", [[:qa<CR>]])
