@@ -1,6 +1,10 @@
-
+-- Handle "project" files
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set('n', '<leader>pp', require('telescope.builtin').git_files, { })
+
+-- Tabbing in insert mode does what's expected
+vim.keymap.set("i", "<S-Tab>", "<C-d>")
+vim.keymap.set("i", "<Tab>", "<C-t>")
 
 -- When in visual mode, J and K move lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
