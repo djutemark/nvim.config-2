@@ -121,6 +121,9 @@ require('packer').startup(function(use)
   -- 2023-04-26
   use 'sakshamgupta05/vim-todo-highlight'
 
+  -- 2023-08-24
+  use 'mbbill/undotree'
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
