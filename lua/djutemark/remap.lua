@@ -24,6 +24,9 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 -- Close window
 vim.keymap.set("n", "<leader>qw", [[:q<CR>]])
 
+-- Close buffer
+vim.keymap.set("n", "<leader>qb", ":bp<bar>sp<bar>bn<bar>bd<CR>")
+
 -- Close ALL windows
 vim.keymap.set("n", "<leader>qq", [[:qa<CR>]])
 

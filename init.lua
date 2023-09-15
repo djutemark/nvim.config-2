@@ -60,17 +60,6 @@ require('packer').startup(function(use)
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
-  vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-  use {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    requires = { 
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-    }
-  }
-
   -- 2023-02-20: Add neoformat
   use 'sbdchd/neoformat'
 
@@ -113,16 +102,15 @@ require('packer').startup(function(use)
 
   -- 2023-04-07
   use 'nvim-tree/nvim-web-devicons'
-  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
-
-  -- 2023-04-19
-  use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
 
   -- 2023-04-26
   use 'sakshamgupta05/vim-todo-highlight'
 
   -- 2023-08-24
   use 'mbbill/undotree'
+
+  -- 2023-09-12
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -496,4 +484,3 @@ cmp.setup {
 require("autoclose").setup()
 
 vim.cmd([[ let g:vim_svelte_plugin_load_full_syntax = 1 ]])
-
