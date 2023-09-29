@@ -37,3 +37,9 @@ vim.keymap.set("n", "<C-s>", [[:w<CR>]])
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
+-- Create new (empty) buffer
+vim.keymap.set("n", "<leader>n", ":new <CR>")
+
+-- Go to next/previous function
+vim.keymap.set("n", "<leader>fn", "]m")
+vim.keymap.set("n", "<leader>fp", "[m")
