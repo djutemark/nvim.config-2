@@ -12,6 +12,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Makes search terms stay in the middle
 vim.keymap.set("n", "n", "nzzzv")
+
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- <leader>p pastes but don't loses current paste buffer
@@ -32,6 +33,7 @@ vim.keymap.set("n", "<leader>qq", [[:qa<CR>]])
 
 -- C-s saves!
 vim.keymap.set("n", "<C-s>", [[:w<CR>]])
+vim.keymap.set("n", "<C-S>", [[:noa w<CR>]])
 
 -- <C-u/d> keeps cursor in the middle of the screen
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
